@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-CHECK OUT THE APP AT 
+CHECK OUT THE APP AT https://srikarhasthi.github.io/ecommerce-website/
 
 ## Available Scripts
 
