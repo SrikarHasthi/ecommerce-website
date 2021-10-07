@@ -1,0 +1,14 @@
+.cart-container{
+ margin: 1rem;
+ padding: 1rem;
+ box-shadow: 0px 0px 11px 2px #aaa;
+}
+.table-image{
+    width: 10%;
+}
+.table td img{
+    width: 100%;
+}
+.delete{
+    cursor:pointer;
+}

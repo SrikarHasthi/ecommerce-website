@@ -1,0 +1,44 @@
+.main-container{
+    margin:10px;
+}
+.sliding-container{
+    height: 45vh;
+    box-shadow: 0px 0px 5px 5px #aaa;
+}
+.sliding-container-two,.carousel,.carousel-inner,.carousel-item,.carousel-item img{
+    height: 100%;
+}
+
+.carousel-cp-btn{
+    background: black;
+    height: 15%;
+    width: 8%;
+    border: none;
+    border-radius: 10px;
+    align-items: center;
+    margin: auto;
+    box-shadow: inset 0px 0px 5px 4px #aaa;
+}
+.product-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.product-container > div{
+    margin: 2rem;
+    margin-top: 0px;
+}
+.cart-btn{
+    position: fixed;
+    bottom: 5rem;
+    right: 4rem;
+    border: none;
+    padding: 20px 20px;
+    border-radius: 50%;
+    background-color:rgb(219, 109, 136);
+}
+.cart-btn span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
