@@ -12,3 +12,10 @@
 .delete{
     cursor:pointer;
 }
+table {
+    table-layout: fixed;
+    width: 100%;   
+}
+th,td {
+    word-wrap: break-word;
+}

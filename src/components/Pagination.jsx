@@ -11,16 +11,17 @@ let Pagination = () => {
   }
   return (
     <nav aria-label="Page navigation example">
-      <ul class="pagination">
+      <ul className="pagination">
         {pagesarray.map((el) => {
           return (
             <li
               onClick={() => {
                 dispatch(paginationCreater({currPage:el}));
               }}
-              class={`page-item ${el === currPage ? "active" : ""}`}
+              key={el}
+              className={`page-item ${el === currPage ? "active" : ""}`}
             >
-              <a class="page-link">{el}</a>
+              <a href="/#" className="page-link">{el}</a>
             </li>
           );
         })}

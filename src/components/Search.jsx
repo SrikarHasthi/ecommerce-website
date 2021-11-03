@@ -5,11 +5,11 @@ let Search = () => {
   let dispatch=useDispatch();
   return (
     <div className="row mb-4">
-      <div className="col-5">
-        <div class="container">
-          <div class="row d-flex justify-content-center search-outer">
-            <div class="d-flex justify-content-center search-inner">
-              <div class="search">
+      <div className="col-xl-5 col-lg-5 col-md-6 col-sm-12">
+        <div className="container">
+          <div className="row d-flex justify-content-center search-outer">
+            <div className="d-flex justify-content-center search-inner">
+              <div className="search">
                 {" "}
                 <input
                   onChange={(el) => {
@@ -17,12 +17,12 @@ let Search = () => {
                      dispatch(paginationCreater({ currPage: 1 }));
                   }}
                   type="text"
-                  class="search-input"
+                  className="search-input"
                   placeholder="Search..."
                   name=""
                 />{" "}
-                <a href="#" class="search-icon">
-                  <span class="material-icons-outlined"> search </span>
+                <a href="/#" className="search-icon">
+                  <span className="material-icons-outlined"> search </span>
                 </a>{" "}
               </div>
             </div>

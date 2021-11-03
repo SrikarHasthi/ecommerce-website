@@ -13,7 +13,7 @@ let Product = (props) => {
         }}
         className="product-img"
       >
-        <img src={props.data.image}></img>
+        <img alt="" src={props.data.image}></img>
       </div>
       <div className="product-card-info">
         {props.data.title.slice(0,25)}...

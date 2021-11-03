@@ -52,6 +52,9 @@
     position: relative;
     border-radius: 5px
 }
+.container{
+    margin-top: 1rem;
+}
 
 .search-icon:hover {
     color: #fff !important
@@ -61,6 +64,6 @@ a:link {
     text-decoration: none
 }
 
-.col-5{
+.col-xl-5,.col-lg-5{
     margin-left: 42%;
 }

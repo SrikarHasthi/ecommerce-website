@@ -8,12 +8,12 @@ let Filter=()=>{
     let type=useSelector(state=>state.filter);
 return (
   <>
-    <ul class="list-group" style={{ cursor: "pointer" }}>
+    <ul className="list-group" style={{ cursor: "pointer" }}>
       <li
         onClick={() => {
           dispatch(filterCreater("All Items"));
         }}
-        class={`list-group-item ${type == "All Items" ? "active" : ""}`}
+        className={`list-group-item ${type === "All Items" ? "active" : ""}`}
         aria-current="true"
       >
         ALL ITEMS
@@ -25,7 +25,8 @@ return (
               dispatch(filterCreater(e));
               dispatch(paginationCreater({ currPage: 1 }));
             }}
-            class={`list-group-item ${type == e ? "active" : ""}`}
+            key={e}
+            className={`list-group-item ${type === e ? "active" : ""}`}
           >
             {e.toUpperCase()}
           </li>
