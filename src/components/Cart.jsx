@@ -59,11 +59,36 @@ let Cart = () => {
                 <td></td>
                 <td></td>
                 <td>Total</td>
-                <td>${total}</td>
+                <td>${total.toFixed(2)}</td>
                 <td></td>
               </tr>
             </tbody>
           </table>
+        </div>
+        <div className="mobile-cart-container">
+          {filtereddata.map((el, index) => {
+            amount = el.price * el.qty;
+            total += amount;
+            return (
+              <div key={index} className="mcc-card">
+                <div className="img-div">
+                  <img alt="" src={el.image}></img>
+                </div>
+                <div className="mcc-info">
+                  <p>Name: {el.title}</p>
+                  <div className="amount-info">
+                    <span>Price: ${el.price}</span>
+                    <span>QTY: {el.qty}</span>
+                    <span>Amount: {(el.price * el.qty).toFixed(2)}</span>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+          <div className="total-info">
+            <h5>Total:</h5>
+            <span>${total.toFixed(2)}</span>
+          </div>
         </div>
       </div>
     </div>

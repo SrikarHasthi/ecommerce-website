@@ -19,3 +19,43 @@ table {
 th,td {
     word-wrap: break-word;
 }
+.mobile-cart-container{
+    display: none;
+    visibility: hidden;
+}
+@media screen and (max-width: 600px){
+.cart-container{
+    display: none;
+    visibility: hidden;
+}
+.mobile-cart-container{
+    display: block;
+    visibility: visible;
+}
+.mobile-cart-container .mcc-card{
+    box-shadow: 0px 0px 9px 5px lightblue;
+    margin: 1rem 1.5rem 1rem 1rem;
+    border-radius: 17px;
+}
+.mobile-cart-container .mcc-card .img-div{
+    display: flex;
+    justify-content: center;
+    padding-top: 0.5rem;
+    height: 10rem;
+}
+.mobile-cart-container .mcc-card .mcc-info{
+ display: flex;
+    flex-direction: column;
+    padding: 4%;
+}
+.mobile-cart-container .mcc-card .mcc-info .amount-info{
+ display: flex;
+    justify-content: space-between;
+}
+.mobile-cart-container .total-info{
+display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+}
