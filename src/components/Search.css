@@ -67,3 +67,8 @@ a:link {
 .col-xl-5,.col-lg-5{
     margin-left: 42%;
 }
+@media screen and (max-width: 600px) {
+.col-sm-12{
+margin-left: 1%;
+}
+}

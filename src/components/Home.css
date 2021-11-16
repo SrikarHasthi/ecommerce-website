@@ -32,6 +32,7 @@
     bottom: 5rem;
     right: 4rem;
     border: none;
+    z-index: 9999;
     padding: 18px 18px;
     border-radius: 50%;
     background-color:rgb(219, 109, 136);
@@ -41,4 +42,12 @@
     justify-content: center;
     align-items: center;
     font-size: 3rem;
+}
+@media screen and (max-width: 600px) {
+.product-container{
+    justify-content: center;
+}
+.sliding-container{
+    height: 35vh;
+}
 }

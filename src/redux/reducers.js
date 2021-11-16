@@ -1,14 +1,12 @@
-import { ADD_TO_CART, REMOVE_FROM_CART,SET_DATA} from "./constants";
-let reducer = (state =[], action) => {
+import { ADD_TO_CART, REMOVE_FROM_CART} from "./constants";
+import {productdata} from "../config";
+let initial_state = productdata.map((e) => {
+  return { ...e,qty:0 };
+});
+let reducer = (state =initial_state, action) => {
   let cp = [];
   let id = -1;
   switch (action.type) {
-    case SET_DATA:
-      let data=action.payload
-      let finalData=data.map((e)=>{
-        return {...e,"qty":0}});
-      return finalData;
-
     case ADD_TO_CART:
       cp = state.map((el) => el);
       id = action.payload - 1;

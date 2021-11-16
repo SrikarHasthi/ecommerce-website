@@ -1,5 +1,4 @@
 import {
-  SET_DATA,
   ADD_TO_CART,
   REMOVE_FROM_CART,
   FILTER_SELECTED,
@@ -7,13 +6,6 @@ import {
   PAGINATION,
 } from "./constants";
 
-
-export const dataCreator = (value) => {
-  return {
-    type: SET_DATA,
-    payload: value,
-  };
-};
 export const addCreator = (id) => {
   return {
     type: ADD_TO_CART,

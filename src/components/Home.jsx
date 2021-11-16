@@ -5,9 +5,10 @@ import { useHistory } from "react-router";
 import Filter from "./Filter";
 import Search from "./Search";
 import { useDispatch } from "react-redux";
-import { dataCreator, paginationCreater } from "../redux/actions";
+import { paginationCreater } from "../redux/actions";
 import Pagination from "./Pagination";
- import { useEffect } from "react";
+ import { useEffect} from "react";
+ 
  let Home = () => {
   let history = useHistory();
   let dispatch = useDispatch();
@@ -15,6 +16,7 @@ import Pagination from "./Pagination";
   let type = useSelector((state) => state.filter);
   let searchValue = useSelector((state) => state.searchValue);
   let pagination = useSelector((state) => state.pagination);
+  
   let filteredItems = data.filter((e) => {
     if (type === "All Items") return true;
     else if (e.category === type) return true;
@@ -28,14 +30,6 @@ import Pagination from "./Pagination";
     return itemName.includes(searchInputText);
   });
   let numberofpages = Math.ceil(filteredItems.length / 9);
-  useEffect(() => {
-    const f= async ()=>{
-    let pdata = await fetch("https://fakestoreapi.com/products");
-      let pdataresult=await pdata.json();
-      dispatch(dataCreator(pdataresult));
-  };
-  f();
-  },[dispatch]);
   useEffect(() => {
     dispatch(paginationCreater({ numberOfPages: numberofpages }));
   }, [numberofpages,dispatch]);

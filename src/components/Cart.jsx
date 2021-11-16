@@ -31,7 +31,7 @@ let Cart = () => {
                 amount = el.price * el.qty;
                 total += amount;
                 return (
-                  <tr>
+                  <tr key={index}>
                     <th scope="row">{index + 1}</th>
                     <td className="table-image">
                       <img alt="" src={el.image}></img>
