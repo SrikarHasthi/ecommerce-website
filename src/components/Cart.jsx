@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { removeCreator } from "../redux/actions";
-import "./Cart.css"
+import "./Cart.css";
 let Cart = () => {
   let dispatcher = useDispatch();
   let data = useSelector((state) => state.data);
@@ -70,25 +70,37 @@ let Cart = () => {
             amount = el.price * el.qty;
             total += amount;
             return (
-              <div key={index} className="mcc-card">
-                <div className="img-div">
-                  <img alt="" src={el.image}></img>
-                </div>
-                <div className="mcc-info">
-                  <p>Name: {el.title}</p>
-                  <div className="amount-info">
-                    <span>Price: ${el.price}</span>
-                    <span>QTY: {el.qty}</span>
-                    <span>Amount: {(el.price * el.qty).toFixed(2)}</span>
+              <div className="mcc-container">
+                <div key={index} className="mcc-card">
+                  <div className="img-div">
+                    <img alt="" src={el.image}></img>
                   </div>
+                  <div className="mcc-info">
+                    <p>Name: {el.title}</p>
+                    <div className="amount-info">
+                      <span>Price: ${el.price}</span>
+                      <span>QTY: {el.qty}</span>
+                      <span>Amount: {(el.price * el.qty).toFixed(2)}</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="mcc-delete">
+                  <span
+                    onClick={() => {
+                      dispatcher(removeCreator(el.id));
+                    }}
+                    className="material-icons-outlined delete"
+                  >
+                    delete
+                  </span>
                 </div>
               </div>
             );
           })}
-          <div className="total-info">
+          {/* <div className="total-info">
             <h5>Total:</h5>
             <span>${total.toFixed(2)}</span>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

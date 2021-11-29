@@ -15,7 +15,9 @@ let Pagination = () => {
         {pagesarray.map((el) => {
           return (
             <li
-              onClick={() => {
+              onClick={(e) => {
+                e.preventDefault();
+                window.scrollTo(0, 0);
                 dispatch(paginationCreater({currPage:el}));
               }}
               key={el}
